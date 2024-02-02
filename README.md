@@ -1,12 +1,14 @@
-This is demo project  to show git activities and Commands 
-I have cloned repo to perform below activities.
+This is a demo project  to show git activities and Commands 
+I have cloned the repo to perform the below activities.
 
-This automation script helps to install Dynamic Application environment:
+This automation script helps to install a Dynamic Application environment:
 
-Tools used:
-Maven Build Tool
-Tomcat App Server
-Nginx Web Server
-Maria DB Server
-Git
-Therefore, Total 2 scripts haveen implemented to complete 3 tier Application deployment
+# Tools used:
+   1. Maven Build Tool
+   2. Tomcat App Server
+   3. Nginx Web Server
+   4. Maria DB Server
+   5. Git
+
+Therefore, Total 2 scripts have implemented to complete 3 tier Application deployment
+
