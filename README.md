@@ -1,5 +1,4 @@
 # 3-Tire-Architecture-Automation-script
-Public
 
 This is a demo project  to show git activities and Commands 
 I have cloned the repo to perform the below activities.
