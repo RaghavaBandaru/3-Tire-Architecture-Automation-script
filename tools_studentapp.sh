@@ -93,21 +93,21 @@ sudo systemctl enable tomcat
 # cd /etc/yum.repos.d/nginx.repo
 # sudo vi /etc/yum.repos.d/nginx.repo
 #sudo yum-config-manager --enable nginx-mainline
+
 sudo yum install nginx
-
-
 sudo systemctl enable nginx
 sudo systemctl start nginx
-Maria DB setup
 
-#sudo yum install mariadb-server.x86_64 -y
-#systemctl enable mariadb
-#systemctl start mariadb
-# systemctl status mariadb
+#Maria DB setup
+
+sudo yum install mariadb-server.x86_64 -y
+systemctl enable mariadb
+systemctl start mariadb
+systemctl status mariadb
 
 
 
-#git clone git@gitlab.com:raghavabandaru854/student-app.git
+git clone git@gitlab.com:raghavabandaru854/student-app.git
 
 
 
