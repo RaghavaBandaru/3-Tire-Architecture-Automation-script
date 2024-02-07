@@ -46,43 +46,45 @@ cd /opt
 
  sudo ln -s /opt/maven/bin/mvn /usr/bin/mvn
 
- tomcat installation(deployment server)
+# tomcat installation(deployment server)
 
 # wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
 
-# tar -xzvf apache-tomcat-9.0.85.tar.gz
+tar -xzvf apache-tomcat-9.0.85.tar.gz
 
-# rm -rf apache-tomcat-9.0.85.tar.gzr
+rm -rf apache-tomcat-9.0.85.tar.gzr
 
-# mv apache-tomcat-9.0.85 appserver
+mv apache-tomcat-9.0.85 appserver
 
 # tomcat as a service(register)
 
-# echo '[Unit]
+sudo chown -R devops:devops /opt
 
-#        Description=Tomcat Server
-#        After=syslog.target network.target
+echo '[Unit]
 
-#       [Service]
-#        Type=forking
-#        User=devops
-#        Group=devops
+        Description=Tomcat Server
+        After=syslog.target network.target
 
-#        Environment=JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.el7_9.x86_64
-#        Environment='JAVA_OPTS=-Djava.awt.headless=true'
-#        Environment=CATALINA_HOME=/opt/appserver/
-#        Environment=CATALINA_BASE=/opt/appserver/
-#        Environment=CATALINA_PID=/opt/appserver/temp/tomcat.pid
-#        Environment='CATALINA_OPTS=-Xms512M'
-#        ExecStart=/opt/appserver/bin/catalina.sh start
-#        ExecStop=/opt/appserver/bin/catalina.sh stop
+       [Service]
+        Type=forking
+        User=devops
+        Group=devops
 
-#        [Install]
-#        WantedBy=multi-user.target' > /etc/systemd/system/tomcat.service
+        Environment=JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.el7_9.x86_64
+        Environment='JAVA_OPTS=-Djava.awt.headless=true'
+        Environment=CATALINA_HOME=/opt/appserver/
+        Environment=CATALINA_BASE=/opt/appserver/
+        Environment=CATALINA_PID=/opt/appserver/temp/tomcat.pid
+        Environment='CATALINA_OPTS=-Xms512M'
+        ExecStart=/opt/appserver/bin/catalina.sh start
+        ExecStop=/opt/appserver/bin/catalina.sh stop
 
-#sudo systemctl daemon-reload
-#sudo systemctl start tomcat
-#sudo systemctl enable tomcat
+        [Install]
+        WantedBy=multi-user.target' > /etc/systemd/system/tomcat.service
+
+sudo systemctl daemon-reload
+sudo systemctl start tomcat
+sudo systemctl enable tomcat
 
 # nginx setup
 
@@ -91,12 +93,12 @@ cd /opt
 # cd /etc/yum.repos.d/nginx.repo
 # sudo vi /etc/yum.repos.d/nginx.repo
 #sudo yum-config-manager --enable nginx-mainline
-#sudo yum install nginx
+sudo yum install nginx
 
 
-#sudo systemctl enable nginx
-#sudo systemctl start nginx
-# Maria DB setup
+sudo systemctl enable nginx
+sudo systemctl start nginx
+Maria DB setup
 
 #sudo yum install mariadb-server.x86_64 -y
 #systemctl enable mariadb
