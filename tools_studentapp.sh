@@ -28,7 +28,7 @@ sudo su - devops -c "git config --global user.name 'devops'"
 sudo su - devops -c "git config --global user.email 'devops@gmail.com'"
 
 # Installing Java 11
-# sudo yum install java-11-openjdk-devel.x86_64 -y
+sudo yum install java-11-openjdk-devel.x86_64 -y
 
 sudo chown -R devops:devops /opt
 
@@ -36,7 +36,7 @@ sudo chown -R devops:devops /opt
 
 cd /opt
 
-# wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
 
  tar -xzvf apache-maven-3.9.6-bin.tar.gz
 
@@ -48,7 +48,7 @@ cd /opt
 
 # tomcat installation(deployment server)
 
-# wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
+ wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
 
 tar -xzvf apache-tomcat-9.0.85.tar.gz
 
