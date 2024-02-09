@@ -37,14 +37,10 @@ sudo chown -R devops:devops /opt
 cd /opt
 
 wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
-
- tar -xzvf apache-maven-3.9.6-bin.tar.gz
-
- rm -rf apache-maven-3.9.6-bin.tar.gz
-
- mv apache-maven-3.9.6 maven
-
- sudo ln -s /opt/maven/bin/mvn /usr/bin/mvn
+tar -xzvf apache-maven-3.9.6-bin.tar.gz
+mv apache-maven-3.9.6 maven
+rm -rf apache-maven-3.9.6-bin.tar.gz
+sudo ln -s /opt/maven/bin/mvn /usr/bin/mvn
 
 # tomcat installation(deployment server)
 
@@ -60,7 +56,7 @@ mv apache-tomcat-9.0.85 appserver
 
 sudo chown -R devops:devops /opt
 
-echo '[Unit]
+ echo '[Unit]
 
         Description=Tomcat Server
         After=syslog.target network.target
