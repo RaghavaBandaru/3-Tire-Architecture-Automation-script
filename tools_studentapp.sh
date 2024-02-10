@@ -99,7 +99,7 @@ systemctl status mariadb
 
 
 
-git clone git@gitlab.com:raghavabandaru854/student-app.git
+git clone https://gitlab.com/raghavabandaru854/student-app.git
 
 
 
