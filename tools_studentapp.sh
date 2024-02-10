@@ -101,6 +101,7 @@ systemctl status mariadb
 
 git clone https://gitlab.com/raghavabandaru854/student-app.git
 
+sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
 
 
 
