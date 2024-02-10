@@ -7,7 +7,7 @@
 
 cd /opt/
 
-# git clone git@gitlab.com:raghavabandaru854/student-app.git
+git clone git@gitlab.com:raghavabandaru854/student-app.git
 
  mysql -uroot < /opt/student-app/dbscript/studentapp.sql
 
@@ -31,7 +31,7 @@ sudo systemctl start tomcat
 
 #Deploying student app
 
-# sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
+sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
 
  cd /opt/student-app/
 
