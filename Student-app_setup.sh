@@ -7,7 +7,7 @@
 
 cd /opt/
 
-git clone git@gitlab.com:raghavabandaru854/student-app.git
+git clone https://gitlab.com/raghavabandaru854/student-app.git
 
  mysql -uroot < /opt/student-app/dbscript/studentapp.sql
 
