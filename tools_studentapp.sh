@@ -22,7 +22,7 @@ echo 'devops     ALL=(ALL)      NOPASSWD: ALL' | sudo tee -a /etc/sudoers
 sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
 sudo service sshd restart
 
-# sudo yum install tree wget zip unzip gzip vim net-tools git bind-utils python2-pip jq -y
+sudo yum install tree wget zip unzip gzip vim net-tools git bind-utils python2-pip jq -y
 
 sudo su - devops -c "git config --global user.name 'devops'"
 sudo su - devops -c "git config --global user.email 'devops@gmail.com'"
@@ -44,7 +44,7 @@ sudo ln -s /opt/maven/bin/mvn /usr/bin/mvn
 
 # tomcat installation(deployment server)
 
- wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.85.tar.gz
 
 tar -xzvf apache-tomcat-9.0.85.tar.gz
 
