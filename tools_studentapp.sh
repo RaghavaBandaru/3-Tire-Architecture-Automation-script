@@ -83,16 +83,12 @@ sudo systemctl start tomcat
 sudo systemctl enable tomcat
 
 # nginx setup
+ sudo yum install epel-release
+ sudo yum install nginx
+ sudo systemctl start nginx
+ sudo systemctl status nginx
+ sudo systemctl enable nginx
 
-
-# sudo yum install yum-utils
-# cd /etc/yum.repos.d/nginx.repo
-# sudo vi /etc/yum.repos.d/nginx.repo
-#sudo yum-config-manager --enable nginx-mainline
-
-sudo yum install nginx
-sudo systemctl enable nginx
-sudo systemctl start nginx
 
 #Maria DB setup
 
