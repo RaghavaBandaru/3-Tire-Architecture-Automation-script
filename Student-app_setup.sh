@@ -5,9 +5,9 @@
 
  sudo setsebool -P httpd_can_network_connect 1
 
-cd /opt/
+cd /opt/student-app
 
-git clone https://gitlab.com/raghavabandaru854/student-app.git
+git pull origin main
 
  mysql -uroot < /opt/student-app/dbscript/studentapp.sql
 
@@ -35,7 +35,7 @@ sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
 
  cd /opt/student-app/
 
- git pull origin main
+
 
  echo 2 | sudo alternatives --config java
 
