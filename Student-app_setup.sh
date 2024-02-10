@@ -31,11 +31,7 @@ sudo systemctl start tomcat
 
 #Deploying student app
 
-sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
-
  cd /opt/student-app/
-
-
 
  echo 2 | sudo alternatives --config java
 
@@ -48,3 +44,20 @@ sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
  cp /opt/student-app/target/*.war /opt/appserver/webapps/student.war
 
 # Nginx static app deployment
+
+cd /usr/share/nginx/html/
+
+sudo rm -rf *
+
+cd /opt/
+
+cd static-project/iPortfolio/
+
+sudo cp -R /opt/static-project/iPortfolio/* /usr/share/nginx/html/
+
+# Reverse Proxy Configuration
+
+sudo cp /opt/student-app/nginx/nginx.conf /etc/nginx/
+
+sudo systemctl stop nginx
+sudo systemctl start nginx
